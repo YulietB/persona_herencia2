@@ -48,11 +48,11 @@ namespace persona_herencia
                         string nombre = textBox1.Text;
                         string fechaN = textBox2.Text;
                         int edad = Convert.ToInt32(textBox3.Text);
-                        int DNI = Convert.ToInt32(textBox4.Text);
+                        int dni = Convert.ToInt32(textBox4.Text);
                         string rangoejecutivo = textBox5.Text;
                         float sueldobase = Convert.ToSingle(textBox6.Text);
                         //creo un objeto alumno con los datos
-                        Trabajador trabajador = new Trabajador(nombre, edad, fechaN,DNI,rangoejecutivo,sueldobase );
+                        Trabajador trabajador = new Trabajador(nombre, edad, fechaN,rangoejecutivo,sueldobase, dni);
                         //guardo los datos en el archivo txt
                         trabajador.Guardar_info();
                     }
@@ -61,11 +61,11 @@ namespace persona_herencia
                         string nombre = textBox1.Text;
                         string fechaN = textBox2.Text;
                         int edad = Convert.ToInt32(textBox3.Text);
-                        int matricula = Convert.ToInt32(textBox4.Text);
+                        int dni= Convert.ToInt32(textBox4.Text);
                         string rangoejecutivo = textBox5.Text;
                         float sueldobase = Convert.ToSingle(textBox6.Text);
                         //creo un objeto alumno con los datos
-                        Maestro maestro = new Maestro(nombre, edad, fechaN, rangoejecutivo, matricula, sueldobase);
+                        Maestro maestro = new Maestro(nombre, edad, fechaN, rangoejecutivo,sueldobase ,dni);
                         //guardo los datos en el archivo txt
                         maestro.Guardar_info();
                     }
@@ -113,7 +113,7 @@ namespace persona_herencia
                     int dni = Convert.ToInt32(textBox4.Text);
                     string rangoejecutivo = textBox5.Text;
                     float sueldobase = Convert.ToSingle(textBox6.Text);
-                    Trabajador empleado = new Trabajador(nombre, edad, fechaN, rangoejecutivo, sueldobase);
+                    Trabajador empleado = new Trabajador(nombre, edad, fechaN, rangoejecutivo, sueldobase, dni);
                 }
 
                 else if (radiodocente.Checked)
@@ -124,7 +124,7 @@ namespace persona_herencia
                     int dni = Convert.ToInt32(textBox4.Text);
                     string rangoejecutivo = textBox5.Text;
                     float sueldobase = Convert.ToSingle(textBox6.Text);
-                    Maestro docente = new Maestro(nombre, edad, fechaN, rangoejecutivo, sueldobase);
+                    Maestro docente = new Maestro(nombre, edad, fechaN, rangoejecutivo, sueldobase, dni);
                 }
                 else
                 {

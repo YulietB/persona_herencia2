@@ -90,18 +90,18 @@ namespace persona_herencia
     class Trabajador : Persona //clase hija que se llama empleado y solicita el sueldo que gana y se una una variable int por qué se ingresan valores numéricos 
     {
         protected float SueldoBase; //variable
-        protected string DNI;
+        protected int DNI;
         public float sueldobase
         {
             get { return SueldoBase; }
             set { SueldoBase = value; }
         }
-        public string dni
+        public int dni
         {
             get { return DNI; }
             set { DNI = value; }
         }
-        public Trabajador(string Nombre, int Edad, string FechadeN, string RangoEjecutivo, float SueldoBase, string DNI)
+        public Trabajador(string Nombre, int Edad, string FechadeN, string RangoEjecutivo, float SueldoBase, int DNI)
         {
             nombre = Nombre;
             edad = Edad;
@@ -140,18 +140,18 @@ namespace persona_herencia
     class Maestro : Persona //clase Hija dónde lo que realizar es igual guardar el sueldo que el usuario este ingresando 
     {
         protected float SueldoBase;
-        protected string DNI;
+        protected int DNI;
         public float sueldobase
         {
             get { return SueldoBase; }
             set { SueldoBase = value; }
         }
-        public string dni
+        public int dni
         {
             get { return DNI; }
             set { DNI = value; }
         }
-        public Maestro(string Nombre, int Edad, string FechadeN, string RangoEjecutivo, float SueldoBase, string DNI)
+        public Maestro(string Nombre, int Edad, string FechadeN, string RangoEjecutivo, float SueldoBase, int DNI)
         {
             nombre = Nombre;
             edad = Edad;
